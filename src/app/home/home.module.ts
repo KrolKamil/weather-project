@@ -5,9 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { MaterialModule } from '../material.module';
+import { WeatherDetailsComponent } from '../weather-details/weather-details.component';
+import { WeatherIconComponent } from '../weather-icon/weather-icon.component';
+import { WeatherDetailsService } from '../weather-details.service';
+import { WeatherDetailsPipe } from '../weather-details.pipe';
 
 @NgModule({
   imports: [
+    MaterialModule,
     CommonModule,
     FormsModule,
     IonicModule,
@@ -18,6 +24,10 @@ import { HomePage } from './home.page';
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [
+    HomePage,
+    WeatherDetailsComponent,
+    WeatherIconComponent
+  ]
 })
 export class HomePageModule {}
