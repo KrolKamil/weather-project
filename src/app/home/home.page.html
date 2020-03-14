@@ -9,17 +9,27 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Pogoda</ion-title>
+      <ion-title id="title" size="large">Pogoda</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-    <!-- <app-weather-details></app-weather-details> -->
-    <mat-form-field appearance="fill">
-      <mat-label>Input</mat-label>
-      <input matInput>
-    </mat-form-field>
-  </div>
+  <ion-item>
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSearch(checkoutForm.value)">
+      <mat-form-field>
+        <mat-label>Miasto</mat-label>
+        <input matInput id="name" type="text" formControlName="name">
+      </mat-form-field>
+      <!-- <button mat-flat-button color="primary">Primary</button> -->
+      <button mat-fab class="button" color="primary" type="submit">Szukaj</button>
+    </form>
+  </ion-item>
+  <ion-item>
+    <ion-item>
+      <app-weather-icon></app-weather-icon>
+    </ion-item>
+    <ion-item>
+      <app-weather-details></app-weather-details>
+    </ion-item>
+  </ion-item>
+
 </ion-content>
