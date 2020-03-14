@@ -13,23 +13,20 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-item>
-    <form [formGroup]="checkoutForm" (ngSubmit)="onSearch(checkoutForm.value)">
-      <mat-form-field>
-        <mat-label>Miasto</mat-label>
-        <input matInput id="name" type="text" formControlName="name">
-      </mat-form-field>
-      <!-- <button mat-flat-button color="primary">Primary</button> -->
-      <button mat-fab class="button" color="primary" type="submit">Szukaj</button>
-    </form>
-  </ion-item>
-  <ion-item>
-    <ion-item>
-      <app-weather-icon></app-weather-icon>
-    </ion-item>
-    <ion-item>
-      <app-weather-details></app-weather-details>
-    </ion-item>
-  </ion-item>
+  <!-- <ion-grid id="container"> -->
+  <ion-grid id="container">
+    <ion-row>
+      <form [formGroup]="checkoutForm" (ngSubmit)="onSearch(checkoutForm.value)">
+        <mat-form-field>
+          <mat-label>Miasto</mat-label>
+          <input matInput id="name" type="text" formControlName="name">
+        </mat-form-field>
+        <button mat-mini-fab class="button" color="primary" type="submit">
+          <mat-icon aria-hidden="false" aria-label="Example home icon">search</mat-icon>
+        </button>
+      </form>
+    </ion-row>
+    <app-weather-details></app-weather-details>
+  </ion-grid>
 
 </ion-content>

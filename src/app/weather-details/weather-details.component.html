@@ -1,10 +1,16 @@
-<div *ngIf="weather !== null">
-  <div class="weather-item">{{weather.name}}</div>
-  <div class="weather-item">{{weather.temperature}}</div>
-  <div class="weather-item">{{weather.pressure}}</div>
-  <div class="weather-item">{{weather.sunrise}}</div>
-  <div class="weather-item">{{weather.sunset}}</div>
-  <div class="weather-item">{{weather.date}}</div>
-  <div class="weather-item">{{weather.description}}</div>
-  <div class="weather-item">{{weather.iconId}}</div>            
-</div>
+<ion-grid *ngIf="weather !== null">
+  <ion-row>
+    <ion-col size="12">{{weather.name}} <app-weather-icon></app-weather-icon></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">{{weather.temperature}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">{{weather.pressure}}</ion-col>
+  </ion-row>
+  <ion-col size="12">{{weather.sunrise}}</ion-col>
+  <ion-col size="12">{{weather.sunset}}</ion-col>
+  <ion-col size="12">{{weather.date}}</ion-col>
+  <ion-col size="12">{{weather.description}}</ion-col>
+  <ion-col size="12">{{weather.iconId}}</ion-col>            
+</ion-grid>
