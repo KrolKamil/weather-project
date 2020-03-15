@@ -6,5 +6,17 @@
   }
 
 #city-name {
+    text-align: center;
     font-size: 35px;
+}
+
+#city-date {
+    text-align: center;
+    font-size: 14px;
+    margin: 0px;
+}
+
+app-weather-icon {
+    position: absolute;
+    right: 0px;
 }

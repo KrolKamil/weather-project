@@ -32,7 +32,7 @@ export class WeatherDetailsPipe implements PipeTransform {
     const day = date.getDate();
     const hours = date.getHours();
     const minutes = date.getMinutes();
-    const formatedDate = `${hours}h:${minutes}min - ${day}/${month}/${year}`;
+    const formatedDate = `${hours}:${minutes} ${day}.${month}.${year} r.`;
     return formatedDate;
   };
 
