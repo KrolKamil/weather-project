@@ -1,5 +1,20 @@
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: red!important;
+}
+
 #title {
   text-align: center;
+}
+
+input {
+  color: #e6e6e8;
+}
+
+#toolbar, #title{
+  padding: 0px;
+  margin: 0px;
+  background-color: #646471;
+  color: white;
 }
 
 mat-form-field {
@@ -14,6 +29,7 @@ form {
 }
 
 #button-search {
+  background-color: #ff4081;
   margin-left: 25px;
 }
 

@@ -3,11 +3,17 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    color: #cacaca;
   }
+
+ion-text {
+    color: #cacaca;
+}
 
 #city-name {
     text-align: center;
     font-size: 35px;
+    color: white;
 }
 
 #city-date {

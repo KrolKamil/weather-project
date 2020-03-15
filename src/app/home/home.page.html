@@ -1,20 +1,21 @@
 <ion-header collapse="condense">
-  <ion-toolbar>
+  <ion-toolbar id="toolbar">
     <ion-title id="title" size="large">Pogoda</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<!-- #b9ddee -->
+<ion-content color="secondary" [fullscreen]="true">
   <ion-grid id="container">
     <ion-row>
       <ion-grid>
         <ion-row>
           <form [formGroup]="checkoutForm" (ngSubmit)="onSearch(checkoutForm.value)">
-            <mat-form-field>
+            <mat-form-field color="accent">
               <mat-label>Miasto</mat-label>
               <input matInput id="name" type="text" formControlName="name">
             </mat-form-field>
-            <button id="button-search" mat-mini-fab class="button" color="primary" type="submit">
+            <button id="button-search" mat-mini-fab class="button" type="submit">
               <mat-icon aria-hidden="false" aria-label="Example home icon">search</mat-icon>
             </button>
           </form>

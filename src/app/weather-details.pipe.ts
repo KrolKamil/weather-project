@@ -41,10 +41,10 @@ export class WeatherDetailsPipe implements PipeTransform {
       return 'Brrr zimno';
     }
     else if ((value > 0) && (value <=10)){
-      return 'Moglo by byc cieplej';
+      return 'Mogło by być cieplej';
     }
     else {
-      return 'Przyjemnie ciepło';
+      return 'Przyjemnie cieplutko';
     }
   };
 }
