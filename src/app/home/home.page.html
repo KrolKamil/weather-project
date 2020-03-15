@@ -1,32 +1,29 @@
-<ion-header [translucent]="true">
+<ion-header collapse="condense">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title id="title" size="large">Pogoda</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title id="title" size="large">Pogoda</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <!-- <ion-grid id="container"> -->
   <ion-grid id="container">
     <ion-row>
-      <form [formGroup]="checkoutForm" (ngSubmit)="onSearch(checkoutForm.value)">
-        <mat-form-field>
-          <mat-label>Miasto</mat-label>
-          <input matInput id="name" type="text" formControlName="name">
-        </mat-form-field>
-        <button mat-mini-fab class="button" color="primary" type="submit">
-          <mat-icon aria-hidden="false" aria-label="Example home icon">search</mat-icon>
-        </button>
-      </form>
+      <ion-grid>
+        <ion-row>
+          <form [formGroup]="checkoutForm" (ngSubmit)="onSearch(checkoutForm.value)">
+            <mat-form-field>
+              <mat-label>Miasto</mat-label>
+              <input matInput id="name" type="text" formControlName="name">
+            </mat-form-field>
+            <button id="button-search" mat-mini-fab class="button" color="primary" type="submit">
+              <mat-icon aria-hidden="false" aria-label="Example home icon">search</mat-icon>
+            </button>
+          </form>
+        </ion-row>
+      </ion-grid>
     </ion-row>
-    <app-weather-details></app-weather-details>
+    <ion-row>
+      <app-weather-details></app-weather-details>
+    </ion-row>
   </ion-grid>
 
 </ion-content>

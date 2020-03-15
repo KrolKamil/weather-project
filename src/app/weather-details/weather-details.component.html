@@ -1,16 +1,97 @@
 <ion-grid *ngIf="weather !== null">
   <ion-row>
-    <ion-col size="12">{{weather.name}} <app-weather-icon></app-weather-icon></ion-col>
+    <ion-col size="12" id="city-icon-container">
+      <ion-text>
+        <h4 id="city-name">{{weather.name}}</h4>
+      </ion-text>
+      <app-weather-icon></app-weather-icon>
+    </ion-col>
   </ion-row>
   <ion-row>
-    <ion-col size="12">{{weather.temperature}}</ion-col>
+    <ion-col size="5">
+      <ion-text>
+        <h6>Temperatura:</h6>
+      </ion-text>
+    </ion-col>
+    <ion-col>
+      <ion-text>
+        <h6>
+          {{weather.temperature}} ℃
+        </h6>
+      </ion-text>
+    </ion-col>
   </ion-row>
   <ion-row>
-    <ion-col size="12">{{weather.pressure}}</ion-col>
+    <ion-col size="5">
+      <ion-text>
+        <h6>Ciśnienie:</h6>
+      </ion-text>
+    </ion-col>
+    <ion-col>
+      <ion-text>
+        <h6>
+          {{weather.pressure}} hpa
+        </h6>
+      </ion-text>
+    </ion-col>
   </ion-row>
-  <ion-col size="12">{{weather.sunrise}}</ion-col>
-  <ion-col size="12">{{weather.sunset}}</ion-col>
-  <ion-col size="12">{{weather.date}}</ion-col>
-  <ion-col size="12">{{weather.description}}</ion-col>
-  <ion-col size="12">{{weather.iconId}}</ion-col>            
+  <ion-row>
+    <ion-col size="5">
+      <ion-text>
+        <h6>Wschód słońca:</h6>
+      </ion-text>
+    </ion-col>
+    <ion-col>
+      <ion-text>
+        <h6>
+          {{weather.sunrise}}
+        </h6>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="5">
+      <ion-text>
+        <h6>Zachód słońca:</h6>
+      </ion-text>
+    </ion-col>
+    <ion-col>
+      <ion-text>
+        <h6>
+          {{weather.sunset}}
+        </h6>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="5">
+      <ion-text>
+        <h6>Opis:</h6>
+      </ion-text>
+    </ion-col>
+    <ion-col>
+      <ion-text>
+        <h6>
+          {{weather.description}}
+        </h6>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+
+<!-- 
+  <ion-row>
+    <ion-col size="12">{{weather.sunrise}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">{{weather.sunset}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">{{weather.date}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">{{weather.description}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">{{weather.iconId}}</ion-col>            
+  </ion-row> -->
 </ion-grid>

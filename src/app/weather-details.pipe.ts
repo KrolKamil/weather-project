@@ -11,7 +11,7 @@ export class WeatherDetailsPipe implements PipeTransform {
     const celsiusTemperature = this.kelvinToCelsius(weatherData.main.temp);
     return {
       name: weatherData.name,
-      temperature: celsiusTemperature,
+      temperature: Math.round(parseFloat(celsiusTemperature)).toString(),
       pressure: weatherData.main.pressure,
       sunrise: this.unixTimeToDate(weatherData.sys.sunrise * 1000),
       sunset: this.unixTimeToDate(weatherData.sys.sunset * 1000),
